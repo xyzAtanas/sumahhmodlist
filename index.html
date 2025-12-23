@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Atanas' Brawl Stars mods list</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #121212;
+      color: #e0e0e0;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    header {
+      width: 100%;
+      padding: 24px 0;
+      text-align: center;
+      background-color: #1f1f1f;
+      box-shadow: 0 1px 3px rgba(0,0,0,.3), 0 4px 6px rgba(0,0,0,.2);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      border-bottom: 1px solid #333;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      font-weight: 400;
+      color: #ffffff;
+      margin: 0;
+    }
+
+    .search-bar {
+      margin-top: 16px;
+      display: flex;
+      justify-content: center;
+      width: 100%;
+    }
+
+    .search-bar input {
+      width: 40%;
+      min-width: 300px;
+      padding: 12px 16px;
+      font-size: 1rem;
+      border-radius: 24px;
+      border: 1px solid #333;
+      background-color: #1f1f1f;
+      color: #e0e0e0;
+      outline: none;
+      transition: box-shadow 0.2s, border-color 0.2s;
+    }
+
+    .search-bar input::placeholder {
+      color: #b0b0b0;
+    }
+
+    .search-bar input:focus {
+      border-color: #1a73e8;
+      box-shadow: 0 2px 6px rgba(26,115,232,0.3);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+      width: 90%;
+      max-width: 1000px;
+      margin-top: 40px;
+      margin-bottom: 40px;
+    }
+
+    .card {
+      background-color: #1e1e1e;
+      border-radius: 12px;
+      box-shadow: 0 1px 3px rgba(0,0,0,.3), 0 1px 2px rgba(0,0,0,.2);
+      transition: box-shadow 0.2s;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    .card:hover {
+      box-shadow: 0 4px 12px rgba(0,0,0,.5), 0 2px 6px rgba(0,0,0,.3);
+    }
+
+    .card-content {
+      padding: 16px;
+      flex-grow: 1;
+    }
+
+    .card-content h2 {
+      font-size: 1.2rem;
+      margin: 0 0 8px 0;
+      color: #ffffff;
+    }
+
+    .card-content p {
+      margin: 0;
+      font-size: 0.95rem;
+      color: #b0b0b0;
+    }
+
+    .card-actions {
+      display: flex;
+      justify-content: flex-end;
+      padding: 8px 16px 16px 16px;
+    }
+
+    .download-button {
+      background-color: #1a73e8;
+      color: #ffffff;
+      border: none;
+      border-radius: 24px;
+      padding: 10px 20px;
+      font-size: 0.95rem;
+      cursor: pointer;
+      transition: background-color 0.2s, transform 0.1s;
+    }
+
+    .download-button:hover {
+      background-color: #1665c1;
+      transform: translateY(-1px);
+    }
+
+    @media (max-width: 600px) {
+      .search-bar input {
+        width: 80%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Atanas' Brawl Stars mods list</h1>
+    <div class="search-bar">
+      <input type="text" placeholder="Search downloads..." id="searchInput">
+    </div>
+  </header>
+
+  <div class="grid" id="cardsGrid">
+    <!-- Cards (same as before) -->
+    <div class="card" data-title="Null's Brawl">
+      <div class="card-content">
+        <h2>Null's Brawl</h2>
+        <p>Download latest Null's Brawl</p>
+      </div>
+      <div class="card-actions">
+        <button class="download-button" onclick="window.open('https://dnull.xyz/latest_bs_i', '_blank')">Download</button>
+      </div>
+    </div>
+
+    <div class="card" data-title="Magic Brawl">
+      <div class="card-content">
+        <h2>Magic Brawl</h2>
+        <p>Download Magic Brawl IPA</p>
+      </div>
+      <div class="card-actions">
+        <button class="download-button" onclick="window.open('https://files.magic-servers.xyz/mb.ipa', '_blank')">Download</button>
+      </div>
+    </div>
+
+    <div class="card" data-title="Retro Brawl">
+      <div class="card-content">
+        <h2>Retro Brawl</h2>
+        <p>Download Retro Brawl IPA</p>
+      </div>
+      <div class="card-actions">
+        <button class="download-button" onclick="window.open('https://files.magic-servers.xyz/retrobrawl.ipa', '_blank')">Download</button>
+      </div>
+    </div>
+
+    <div class="card" data-title="NBS Offline">
+      <div class="card-content">
+        <h2>NBS Offline</h2>
+        <p>Download NBS Offline IPA</p>
+      </div>
+      <div class="card-actions">
+        <button class="download-button" onclick="window.open('https://download2285.mediafire.com/fmb6b27c6vngLEmY7By89JmCDvpS--WBF5X2J8GvxpLTga8_B0P6GR0q1y64J6tKSwANru3x91_hIb_saTOd0IfVuBgBmJBDUFmufpG4y129_VUZuD2xGTCxXv4uKLbXK2FEt0sAuc1uhZ7InuPgSkBW7Sv6wNtZJZTcvtCBEFXQ/z68hwej9zh8uiyq/nbs.ipa', '_blank')">Download</button>
+      </div>
+    </div>
+
+    <div class="card" data-title="Slug Fest Datamines">
+      <div class="card-content">
+        <h2>Slug Fest Datamines</h2>
+        <p>Download from Telegram</p>
+      </div>
+      <div class="card-actions">
+        <button class="download-button" onclick="window.open('https://t.me/iOSModsDL/7', '_blank')">Download</button>
+      </div>
+    </div>
+
+    <div class="card" data-title="Nostalgia Brawl v1.1734">
+      <div class="card-content">
+        <h2>Nostalgia Brawl v1.1734</h2>
+        <p>Download from Telegram</p>
+      </div>
+      <div class="card-actions">
+        <button class="download-button" onclick="window.open('https://t.me/iOSModsDL/5', '_blank')">Download</button>
+      </div>
+    </div>
+
+    <div class="card" data-title="HyperBrawl">
+      <div class="card-content">
+        <h2>HyperBrawl</h2>
+        <p>Download from Telegram</p>
+      </div>
+      <div class="card-actions">
+        <button class="download-button" onclick="window.open('https://t.me/iOSModsDL/2', '_blank')">Download</button>
+      </div>
+    </div>
+
+    <div class="card" data-title="Golden Brawl v1">
+      <div class="card-content">
+        <h2>Golden Brawl v1</h2>
+        <p>Download from Telegram</p>
+      </div>
+      <div class="card-actions">
+        <button class="download-button" onclick="window.open('https://t.me/iOSModsDL/20', '_blank')">Download</button>
+      </div>
+    </div>
+
+    <div class="card" data-title="Custom Brawl v2.05">
+      <div class="card-content">
+        <h2>Custom Brawl v2.05</h2>
+        <p>Download from Telegram</p>
+      </div>
+      <div class="card-actions">
+        <button class="download-button" onclick="window.open('https://t.me/iOSModsDL/9', '_blank')">Download</button>
+      </div>
+    </div>
+
+    <div class="card" data-title="Custom Brawl v2.0">
+      <div class="card-content">
+        <h2>Custom Brawl v2.0</h2>
+        <p>Download from Telegram</p>
+      </div>
+      <div class="card-actions">
+        <button class="download-button" onclick="window.open('https://t.me/iOSModsDL/6', '_blank')">Download</button>
+      </div>
+    </div>
+
+    <div class="card" data-title="Custom Brawl v1.6">
+      <div class="card-content">
+        <h2>Custom Brawl v1.6</h2>
+        <p>Download from Telegram</p>
+      </div>
+      <div class="card-actions">
+        <button class="download-button" onclick="window.open('https://t.me/iOSModsDL/4', '_blank')">Download</button>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    const searchInput = document.getElementById('searchInput');
+    const cards = document.querySelectorAll('.card');
+
+    searchInput.addEventListener('input', () => {
+      const filter = searchInput.value.toLowerCase();
+      cards.forEach(card => {
+        const title = card.getAttribute('data-title').toLowerCase();
+        if (title.includes(filter)) {
+          card.style.display = '';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
+
